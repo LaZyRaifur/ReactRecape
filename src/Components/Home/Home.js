@@ -13,7 +13,8 @@ const Home = () => {
         <div>
             <h1>Total Country : {country.length}</h1>
             {
-                country.map(country => <Country country={country}></Country>)
+                country.map(country =>
+                     <Country country={country}></Country>)
             }
         </div>
     );

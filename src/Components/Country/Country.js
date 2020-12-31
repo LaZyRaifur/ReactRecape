@@ -7,14 +7,21 @@ const Country = (props) => {
 
     const handleClick =(countryName) =>
     {
-        const url = `/country/${countryName}`;
+        const url = `${countryName}`;
     history.push(url);
     }
+    const style = {
+        border: '1px solid purple',
+        margin: '20px',
+        padding: '20px',
+        borderRadius: '20px'
+
+    }
     return (
-        <div>
+        <div style={style}>
             <h2>Country Name : {name}</h2>
             <p><small>Capital : {capital}</small></p>
-            <Link to={`/country/${name}`}>
+            <Link to={`/${name}`}>
                 Show details
             </Link>
             <button onClick={()=> handleClick(name)}>Click Me</button>
